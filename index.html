@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Online Voting System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            🎓 StudentVote
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#vote">Vote</a>
+            <a href="#results">Results</a>
+        </nav>
+    </header>
+
+
+    <!-- Home -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+                Student Online Voting System
+            </h1>
+
+            <p>
+                Vote securely for your student council representatives.
+            </p>
+
+            <button
+                class="btn"
+                onclick="startVoting()"
+            >
+                Start Voting
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Student Verification -->
+    <section
+        class="section hidden"
+        id="loginSection"
+    >
+
+        <div class="form-card">
+
+            <h2>Student Verification</h2>
+
+            <p>
+                Enter your student information to continue.
+            </p>
+
+            <label for="studentId">
+                Student ID
+            </label>
+
+            <input
+                type="text"
+                id="studentId"
+                placeholder="e.g. 2026-00123"
+            >
+
+            <label for="studentName">
+                Student Name
+            </label>
+
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Enter your full name"
+            >
+
+            <button
+                class="btn"
+                onclick="verifyStudent()"
+            >
+                Continue
+            </button>
+
+            <p
+                id="loginMessage"
+                class="error-message"
+            ></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Voting -->
+    <section
+        class="section hidden"
+        id="voteSection"
+    >
+
+        <div class="vote-header">
+
+            <h2>Student Council Election 2026</h2>
+
+            <p>
+                Select one candidate for each position.
+            </p>
+
+        </div>
+
+
+        <!-- President -->
+        <div class="position-card">
+
+            <h3>President</h3>
+
+            <div
+                class="candidate-grid"
+                id="presidentCandidates"
+            ></div>
+
+        </div>
+
+
+        <!-- Vice President -->
+        <div class="position-card">
+
+            <h3>Vice President</h3>
+
+            <div
+                class="candidate-grid"
+                id="vicePresidentCandidates"
+            ></div>
+
+        </div>
+
+
+        <!-- Secretary -->
+        <div class="position-card">
+
+            <h3>Secretary</h3>
+
+            <div
+                class="candidate-grid"
+                id="secretaryCandidates"
+            ></div>
+
+        </div>
+
+
+        <div class="submit-container">
+
+            <button
+                class="btn submit-btn"
+                onclick="submitVote()"
+            >
+                Submit Vote
+            </button>
+
+            <p
+                id="voteMessage"
+                class="error-message"
+            ></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Confirmation -->
+    <section
+        class="section hidden"
+        id="confirmationSection"
+    >
+
+        <div class="confirmation-card">
+
+            <div class="check">
+                ✓
+            </div>
+
+            <h2>Vote Submitted!</h2>
+
+            <p>
+                Thank you for participating in the
+                Student Council Election.
+            </p>
+
+            <p>
+                Your vote has been successfully recorded.
+            </p>
+
+            <button
+                class="btn"
+                onclick="showResults()"
+            >
+                View Results
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Results -->
+    <section
+        class="section hidden"
+        id="results"
+    >
+
+        <h2 class="results-title">
+            Election Results
+        </h2>
+
+        <div id="resultsContainer"></div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 StudentVote | Student Council Election
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
