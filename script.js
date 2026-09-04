@@ -9,7 +9,7 @@ const candidates = {
             id: 1,
             name: "Juan Dela Cruz",
             party: "Student Unity Party",
-            icon: "👨🏻"
+            icon: "student1.jpg"
         },
         {
             id: 2,
